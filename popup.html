@@ -1,13 +1,21 @@
 <!DOCTYPE html>
 <html>
 <title>W3.CSS</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<link rel='stylesheet' href='https://www.w3schools.com/w3css/4/w3.css'>
 <style>
     .false {
         height: 25px;
         width: 25px;
-        background-color: #bbb;
+        background-color: rgb(214, 48, 48);
+        border-radius: 50%;
+        display: inline-block;
+    }
+    
+    .undefined {
+        height: 25px;
+        width: 25px;
+        background-color: rgb(214, 48, 48);
         border-radius: 50%;
         display: inline-block;
     }
@@ -19,61 +27,138 @@
         border-radius: 50%;
         display: inline-block;
     }
+    
+    .switch {
+        position: relative;
+        display: inline-block;
+        width: 60px;
+        height: 34px;
+    }
+    
+    .switch input {
+        opacity: 0;
+        width: 0;
+        height: 0;
+    }
+    
+    .slider {
+        position: absolute;
+        cursor: pointer;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #ccc;
+        -webkit-transition: .4s;
+        transition: .4s;
+    }
+    
+    .slider:before {
+        position: absolute;
+        content: "";
+        height: 26px;
+        width: 26px;
+        left: 4px;
+        bottom: 4px;
+        background-color: white;
+        -webkit-transition: .4s;
+        transition: .4s;
+    }
+    
+    input:checked+.slider {
+        background-color: #2196F3;
+    }
+    
+    input:focus+.slider {
+        box-shadow: 0 0 1px #2196F3;
+    }
+    
+    input:checked+.slider:before {
+        -webkit-transform: translateX(26px);
+        -ms-transform: translateX(26px);
+        transform: translateX(26px);
+    }
+    /* Rounded sliders */
+    
+    .slider.round {
+        border-radius: 34px;
+    }
+    
+    .slider.round:before {
+        border-radius: 50%;
+    }
 </style>
 
 <body>
-
-    <div class="w3-container">
+    <div class='w3-container'>
         <h3>Device Info</h3>
-
-        <table class="w3-table-all w3-card-4">
+        <table class='w3-table-all w3-card-4'>
             <tr>
                 <td>Device Name</td>
-                <td>'+row['name']+'</td>
+                <td>" + row['name'] + "</td>
             </tr>
             <tr>
                 <td>Capacity</td>
-                <td>'+row['capacity']+'</td>
+                <td>" + row['capacity'] + "</td>
             </tr>
             <tr>
                 <td>Charging Time</td>
-                <td>'+row['capacity']+'</td>
+                <td>" + row['chargingTime'] + "</td>
             </tr>
             <tr>
                 <td>Discharging Time</td>
-                <td>'+row['capacity']+'</td>
+                <td>" + row['dischargingTime'] + "</td>
             </tr>
             <tr>
                 <td>Battery health</td>
-                <td>'+row['capacity']+'</td>
+                <td>" + row['betteryHealth'] + "</td>
             </tr>
             <tr>
                 <td>Alarm</td>
-                <td>'+row['capacity']+'</td>
+                <td>" + row['alarm'] + "</td>
             </tr>
             <tr>
                 <td>Longitude</td>
-                <td>'+row['capacity']+'</td>
+                <td>" + row['longitude'] + "</td>
             </tr>
             <tr>
                 <td>Latitude</td>
-                <td>'+row['capacity']+'</td>
+                <td>" + row['latitude'] + "</td>
             </tr>
             <tr>
                 <td>Hardware ID</td>
-                <td>'+row['capacity']+'</td>
+                <td>" + row['hardwareId'] + "</td>
             </tr>
             <tr>
                 <td>Lamp Brightness</td>
-                <td>'+row['capacity']+'</td>
+                <td>" + row['brightness'] + "</td>
             </tr>
             <tr>
                 <td>Lamp Status</td>
-                <td><span class=\ "'+row['capacity']+'\"></span></td>
+                <td><span class='" + row[' lamp '] + "'></span></td>
+            </tr>
+
+            <tr>
+                <td>Switch Lamp</td>
+                <td>
+                    <label class='switch'>
+            <input id='5eff238f8b91d3a043f4808c' type='checkbox'>
+            <span class='slider round'></span>
+          </label>
+                </td>
             </tr>
         </table>
     </div>
-
 </body>
 
 </html>
+<script src='js/jquery.js'></script>
+<script src='js/jquery-1.8.3.min.js'></script>
+
+
+<script>
+    $('#5eff238f8b91d3a043f4808c').click(function() {
+        alert('Checkbox state (method 1) = ' + $('#test').prop('checked'));
+        alert('Checkbox state (method 2) = ' + $('#test').is(':checked'));
+    });
+</script>

@@ -1,6 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 
+<script type="text/javascript">
+    if (sessionStorage.getItem("id") == null) {
+        window.location.href = "index.html";
+    }
+</script>
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -56,213 +62,12 @@
             <a href="index.html" class="logo">MY<span class="lite">Light</span></a>
             <!--logo end-->
 
-            <div class="nav search-row" id="top_menu">
-                <!--  search form start -->
-                <ul class="nav top-menu">
-                    <li>
-                        <form class="navbar-form">
-                            <input class="form-control" placeholder="Search" type="text">
-                        </form>
-                    </li>
-                </ul>
-                <!--  search form end -->
-            </div>
 
             <div class="top-nav notification-row">
                 <!-- notificatoin dropdown start-->
                 <ul class="nav pull-right top-menu">
 
-                    <!-- task notificatoin start -->
-                    <li id="task_notificatoin_bar" class="dropdown">
-                        <a data-toggle="dropdown" class="dropdown-toggle" href="#">
-                            <span class="icon-task-l"></i>
-                            <span class="badge bg-important">5</span>
-                        </a>
-                        <ul class="dropdown-menu extended tasks-bar">
-                            <div class="notify-arrow notify-arrow-blue"></div>
-                            <li>
-                                <p class="blue">You have 5 pending tasks</p>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <div class="task-info">
-                                        <div class="desc">Design PSD </div>
-                                        <div class="percent">90%</div>
-                                    </div>
-                                    <div class="progress progress-striped">
-                                        <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style="width: 90%">
-                                            <span class="sr-only">90% Complete (success)</span>
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <div class="task-info">
-                                        <div class="desc">
-                                            Project 1
-                                        </div>
-                                        <div class="percent">30%</div>
-                                    </div>
-                                    <div class="progress progress-striped">
-                                        <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100" style="width: 30%">
-                                            <span class="sr-only">30% Complete (warning)</span>
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <div class="task-info">
-                                        <div class="desc">Digital Marketing</div>
-                                        <div class="percent">80%</div>
-                                    </div>
-                                    <div class="progress progress-striped">
-                                        <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%">
-                                            <span class="sr-only">80% Complete</span>
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <div class="task-info">
-                                        <div class="desc">Logo Designing</div>
-                                        <div class="percent">78%</div>
-                                    </div>
-                                    <div class="progress progress-striped">
-                                        <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="78" aria-valuemin="0" aria-valuemax="100" style="width: 78%">
-                                            <span class="sr-only">78% Complete (danger)</span>
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <div class="task-info">
-                                        <div class="desc">Mobile App</div>
-                                        <div class="percent">50%</div>
-                                    </div>
-                                    <div class="progress progress-striped active">
-                                        <div class="progress-bar" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width: 50%">
-                                            <span class="sr-only">50% Complete</span>
-                                        </div>
-                                    </div>
 
-                                </a>
-                            </li>
-                            <li class="external">
-                                <a href="#">See All Tasks</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <!-- task notificatoin end -->
-                    <!-- inbox notificatoin start-->
-                    <li id="mail_notificatoin_bar" class="dropdown">
-                        <a data-toggle="dropdown" class="dropdown-toggle" href="#">
-                            <i class="icon-envelope-l"></i>
-                            <span class="badge bg-important">5</span>
-                        </a>
-                        <ul class="dropdown-menu extended inbox">
-                            <div class="notify-arrow notify-arrow-blue"></div>
-                            <li>
-                                <p class="blue">You have 5 new messages</p>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <span class="photo"><img alt="avatar" src="./img/avatar-mini.jpg"></span>
-                                    <span class="subject">
-                                    <span class="from">Greg  Martin</span>
-                                    <span class="time">1 min</span>
-                                    </span>
-                                    <span class="message">
-                                        I really like this admin panel.
-                                    </span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <span class="photo"><img alt="avatar" src="./img/avatar-mini2.jpg"></span>
-                                    <span class="subject">
-                                    <span class="from">Bob   Mckenzie</span>
-                                    <span class="time">5 mins</span>
-                                    </span>
-                                    <span class="message">
-                                     Hi, What is next project plan?
-                                    </span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <span class="photo"><img alt="avatar" src="./img/avatar-mini3.jpg"></span>
-                                    <span class="subject">
-                                    <span class="from">Phillip   Park</span>
-                                    <span class="time">2 hrs</span>
-                                    </span>
-                                    <span class="message">
-                                        I am like to buy this Admin Template.
-                                    </span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <span class="photo"><img alt="avatar" src="./img/avatar-mini4.jpg"></span>
-                                    <span class="subject">
-                                    <span class="from">Ray   Munoz</span>
-                                    <span class="time">1 day</span>
-                                    </span>
-                                    <span class="message">
-                                        Icon fonts are great.
-                                    </span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">See all messages</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <!-- inbox notificatoin end -->
-                    <!-- alert notification start-->
-                    <li id="alert_notificatoin_bar" class="dropdown">
-                        <a data-toggle="dropdown" class="dropdown-toggle" href="#">
-
-                            <i class="icon-bell-l"></i>
-                            <span class="badge bg-important">7</span>
-                        </a>
-                        <ul class="dropdown-menu extended notification">
-                            <div class="notify-arrow notify-arrow-blue"></div>
-                            <li>
-                                <p class="blue">You have 4 new notifications</p>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <span class="label label-primary"><i class="icon_profile"></i></span> Friend Request
-                                    <span class="small italic pull-right">5 mins</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <span class="label label-warning"><i class="icon_pin"></i></span> John location.
-                                    <span class="small italic pull-right">50 mins</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <span class="label label-danger"><i class="icon_book_alt"></i></span> Project 3 Completed.
-                                    <span class="small italic pull-right">1 hr</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <span class="label label-success"><i class="icon_like"></i></span> Mick appreciated your work.
-                                    <span class="small italic pull-right"> Today</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">See all notifications</a>
-                            </li>
-                        </ul>
-                    </li>
                     <!-- alert notification end-->
                     <!-- user login dropdown start-->
                     <li class="dropdown">
@@ -270,31 +75,13 @@
                             <span class="profile-ava">
                                 <img alt="" src="img/avatar1_small.jpg">
                             </span>
-                            <span class="username">Jhon Doe</span>
+                            <span id="spanUser" class="username"></span>
                             <b class="caret"></b>
                         </a>
                         <ul class="dropdown-menu extended logout">
                             <div class="log-arrow-up"></div>
-                            <li class="eborder-top">
-                                <a href="#"><i class="icon_profile"></i> My Profile</a>
-                            </li>
                             <li>
-                                <a href="#"><i class="icon_mail_alt"></i> My Inbox</a>
-                            </li>
-                            <li>
-                                <a href="#"><i class="icon_clock_alt"></i> Timeline</a>
-                            </li>
-                            <li>
-                                <a href="#"><i class="icon_chat_alt"></i> Chats</a>
-                            </li>
-                            <li>
-                                <a href="login.html"><i class="icon_key_alt"></i> Log Out</a>
-                            </li>
-                            <li>
-                                <a href="documentation.html"><i class="icon_key_alt"></i> Documentation</a>
-                            </li>
-                            <li>
-                                <a href="documentation.html"><i class="icon_key_alt"></i> Documentation</a>
+                                <a href="index.html"><i class="icon_key_alt"></i> Log Out</a>
                             </li>
                         </ul>
                     </li>
@@ -357,13 +144,21 @@
     <!-- custom script for this page-->
     <script src="js/sparkline-chart.js"></script>
     <script src="js/easy-pie-chart.js"></script>
+    <script type="text/javascript" src="constant.js"></script>
 
 
     <script>
         var latitude = -7.27626;
         var longitude = 112.72878;
+        var baseUrl = base_url;
 
         var map = L.map('mapid').setView([latitude, longitude], 12);
+
+        var userId = sessionStorage.getItem("id")
+
+        $("#spanUser").text(sessionStorage.getItem("username"));
+
+
 
         L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
             attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
@@ -384,33 +179,80 @@
 
         // map.on('click', onMapClick);
 
+        var hId;
+
         $.ajax({
             type: "GET",
-            url: "http://104.43.171.129/hardware",
+            url: baseUrl + "hardware",
             cache: false,
             success: function(data) {
+                hId = data.orders;
                 $.each(data.orders, function(key, row) {
-                    console.log(row['capacity']);
                     var long = row['longitude'];
                     var lat = row['latitude'];
 
                     if (long != null) {
                         if (lat != null) {
                             var circle = L.circle([lat, long], {
-                                color: row['lamp'] ? 'green' : 'red',
-                                fillColor: row['lamp'] ? '#23a317' : '#f03',
+                                // color: row['lamp'] ? '#23a317' : '#f03',
+                                // fillColor: row['lamp'] ? '#23a317' : '#f03',
+                                color: 'blue',
+                                fillColor: 'blue',
                                 fillOpacity: 0.5,
-                                radius: 250
+                                radius: 200
                             }).addTo(map);
 
-                            circle.bindPopup("<!DOCTYPE html> <html> <title>W3.CSS</title> <meta name='viewport' content='width=device-width, initial-scale=1'> <link rel='stylesheet' href='https://www.w3schools.com/w3css/4/w3.css'> <style> .false { height: 25px; width: 25px; background-color: rgb(214, 48, 48); border-radius: 50%; display: inline-block; } .undefined { height: 25px; width: 25px; background-color: rgb(214, 48, 48); border-radius: 50%; display: inline-block; } .true { height: 25px; width: 25px; background-color: #00FF00; border-radius: 50%; display: inline-block; } </style> <body> <div class='w3-container'> <h3>Device Info</h3> <table class='w3-table-all w3-card-4'> <tr> <td>Device Name</td> <td>" + row['name'] + "</td> </tr> <tr> <td>Capacity</td> <td>" + row['capacity'] + "</td> </tr> <tr> <td>Charging Time</td> <td>" + row['chargingTime'] + "</td> </tr> <tr> <td>Discharging Time</td> <td>" + row['dischargingTime'] + "</td> </tr> <tr> <td>Battery health</td> <td>" + row['betteryHealth'] + "</td> </tr> <tr> <td>Alarm</td> <td>" + row['alarm'] + "</td> </tr> <tr> <td>Longitude</td> <td>" + row['longitude'] + "</td> </tr> <tr> <td>Latitude</td> <td>" + row['latitude'] + "</td> </tr> <tr> <td>Hardware ID</td> <td>" + row['hardwareId'] + "</td> </tr> <tr> <td>Lamp Brightness</td> <td>" + row['brightness'] + "</td> </tr> <tr> <td>Lamp Status</td> <td><span class='" + row['lamp'] + "'></span></td> </tr> </table> </div> </body> </html>");
+                            var isCheked = row['lamp'] ? "checked" : "";
+                            var bgColor = row['lamp'] ? "background-color: #00FF00;" : "background-color: rgb(214, 48, 48)";
+
+                            circle.bindPopup("<!DOCTYPE html> <html> <title>W3.CSS</title> <meta name='viewport' content='width=device-width, initial-scale=1'> <link rel='stylesheet' href='https://www.w3schools.com/w3css/4/w3.css'> <style> .false { height: 25px; width: 25px; background-color: rgb(214, 48, 48); border-radius: 50%; display: inline-block; } .undefined { height: 25px; width: 25px; background-color: rgb(214, 48, 48); border-radius: 50%; display: inline-block; } .true { height: 25px; width: 25px; background-color: #00FF00; border-radius: 50%; display: inline-block; } .switch { position: relative; display: inline-block; width: 60px; height: 34px; } .switch input { opacity: 0; width: 0; height: 0; } .slider { position: absolute; cursor: pointer; top: 0; left: 0; right: 0; bottom: 0; background-color: #ccc; -webkit-transition: .4s; transition: .4s; } .slider:before { position: absolute; content: ''; height: 26px; width: 26px; left: 4px; bottom: 4px; background-color: white; -webkit-transition: .4s; transition: .4s; } input:checked+.slider { background-color: #2196F3; } input:focus+.slider { box-shadow: 0 0 1px #2196F3; } input:checked+.slider:before { -webkit-transform: translateX(26px); -ms-transform: translateX(26px); transform: translateX(26px); } /* Rounded sliders */ .slider.round { border-radius: 34px; } .slider.round:before { border-radius: 50%; } </style> <body> <div class='w3-container'> <h3>Device Info</h3> <table class='w3-table-all w3-card-4'> <tr> <td>Device Name</td> <td id='name_" + row['_id'] + "'>" + row['name'] + "</td> </tr> <tr> <td>Capacity</td> <td id='capacity_" + row['_id'] + "'>" + row['capacity'] + "</td> </tr> <tr> <td>Charging Time</td> <td id='charging_time_" + row['_id'] + "'>" + row['chargingTime'] + "</td> </tr> <tr> <td>Discharging Time</td> <td id='discharging_time_" + row['_id'] + "'>" + row['dischargingTime'] + "</td> </tr> <tr> <td>Battery health</td> <td id='battery_health_" + row['_id'] + "'>" + row['betteryHealth'] + "</td> </tr> <tr> <td>Alarm</td> <td id='alarm_" + row['_id'] + "'>" + row['alarm'] + "</td> </tr> <tr> <td>Longitude</td> <td id='longitude_" + row['_id'] + "'>" + row['longitude'] + "</td> </tr> <tr> <td>Latitude</td> <td id='latitude" + row['_id'] + "'>" + row['latitude'] + "</td> </tr> <tr> <td>Hardware ID</td> <td>" + row['hardwareId'] + "</td> </tr> <tr> <td>Lamp Brightness</td> <td id='brightness_" + row['_id'] + "'>" + row['brightness'] + "</td> </tr> <tr> <td>Lamp Status</td> <td><span style='" + bgColor + "' id='lamp_" + row['_id'] + "' class='" + row[' lamp '] + "'></span></td> </tr> <tr> <td>Switch Lamp</td> <td> <label class='switch'> <input onclick='ShowHideDiv(this);' id='checkbox_" + row['_id'] + "' type='checkbox' " + isCheked + "> <span class='slider round'></span> </label> </td> </tr> </table> </div> </body> </html>");
                         }
                     }
                 });
             }
         });
 
-        //knob
+        setInterval(function() {
+            realtime();
+        }, 1000);
+
+        function realtime() {
+            $.ajax({
+                type: "GET",
+                url: baseUrl + "hardware",
+                cache: false,
+                success: function(data) {
+                    $.each(data.orders, function(key, row) {
+                        $("#name_" + row['_id']).html(row['name']);
+                        $("#capacity_" + row['_id']).html(row['capacity']);
+                        $("#charging_time_" + row['_id']).html(row['chargingTime']);
+                        $("#discharging_time_" + row['_id']).html(row['dischargingTime']);
+                        $("#alarm_" + row['_id']).html(row['alarm']);
+                        row['lamp'] ? $("#lamp_" + row['_id']).css('background-color', '#00FF00') : $("#lamp_" + row['_id']).css('background-color', 'rgb(214, 48, 48)');
+                        $("#brightness_" + row['_id']).html(row['brightness']);
+                        row['lamp'] ? $("#checkbox_" + row['_id']).attr('checked', 'checked') : $("#checkbox_" + row['_id']).removeAttr('checked');;
+                    });
+                }
+            });
+        }
+
+        function setLamp(status, hid) {
+            console.log(hId);
+            $.ajax({
+                type: "POST",
+                url: baseUrl + "devices/update_lamp_web",
+                data: ({
+                    hardwareId: hid,
+                    lamp: status
+                }),
+                cache: false,
+                success: function(data) {
+                    console.log(data);
+                }
+            });
+        }
+
+
         $(function() {
             $(".knob").knob({
                 'draw': function() {
@@ -430,11 +272,17 @@
             });
         });
 
-        //custom select box
-
         $(function() {
             $('select.styled').customSelect();
         });
+
+        function ShowHideDiv(chkPassport) {
+            if ($('#' + chkPassport.id).is(':checked')) {
+                setLamp('true', chkPassport.id.split('checkbox_').join(''));
+            } else {
+                setLamp('false', chkPassport.id.split('checkbox_').join(''));
+            }
+        }
     </script>
 
 </body>
