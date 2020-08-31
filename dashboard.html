@@ -183,9 +183,10 @@
 
         $.ajax({
             type: "GET",
-            url: baseUrl + "hardware",
+            url: baseUrl + "devices/web/" + userId,
             cache: false,
             success: function(data) {
+                console.log(userId)
                 hId = data.orders;
                 $.each(data.orders, function(key, row) {
                     var long = row['longitude'];
