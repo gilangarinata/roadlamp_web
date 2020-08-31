@@ -1,4 +1,4 @@
-var base_url = "http://localhost:8000/";
+var base_url = "http://157.230.33.194:8000/";
 
 var USERNAME = "USERNAME";
 var ID = "ID";
